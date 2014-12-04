@@ -249,7 +249,7 @@ textarea {
 }
 
 
-.page > ul > li a{
+.page > ul > li > a{
 	display: block;
 	padding: 20px 10px;
 	background: #6ECCAD;
@@ -264,7 +264,7 @@ textarea {
 	-webkit-transition: all 0.2s ease-in-out;
 }
 
-.page > ul > li a:hover{
+.page > ul > li > a:hover{
 	border: 1px solid #6ECCAD;
 	background: #fff;
 	color: #6ECCAD;
