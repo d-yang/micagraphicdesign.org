@@ -239,6 +239,37 @@ textarea {
 	color: #6ECCAD;
 }
 
+.page > ul{
+	width: 300px;
+	display: block;
+	margin: 0 auto;
+	list-style:none;
+	vertical-align: center;
+	margin-top: 50px;
+}
+
+
+.page > ul > li a{
+	display: block;
+	padding: 20px 10px;
+	background: #6ECCAD;
+	font-family: 'proxima_novasemibold', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+	border: 1px solid #6ECCAD;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.page > ul > li a:hover{
+	border: 1px solid #6ECCAD;
+	background: #fff;
+	color: #6ECCAD;
+}
+
 .main{
 	max-width: 1000px;
 	width: 100%;
