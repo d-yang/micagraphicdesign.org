@@ -213,6 +213,7 @@ textarea {
 .page {
 	width: 100%;
 	margin: 0 auto;
+	padding: 0;
 }
 
 .page button{
@@ -246,6 +247,7 @@ textarea {
 	list-style:none;
 	vertical-align: center;
 	margin-top: 50px;
+	padding: 0;
 }
 
 
@@ -282,7 +284,7 @@ textarea {
 	width: 240px;
 	height: 100%;
 	top: 0;
-	z-index: 1000;
+	z-index: 9999999;
 	left: -240px;
 	overflow: auto;
 }
@@ -520,6 +522,13 @@ input{
 	-webkit-transition: all 0.2s ease-in-out;
 }
 
+.main > .events > .heading > b{
+	font-family: 'proxima_semibold', sans-serif;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
 .main > .events .footer:hover,
 .main > .gallery .footer:hover{
 	background: #6ECCAD;
@@ -559,7 +568,7 @@ input{
 	bottom: 0;
 	right: 0;
 	width: 100px;
-	height: 370px;
+	height: 350px;
 	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
 	z-index: 9999999;
 }
@@ -634,11 +643,11 @@ input{
 }
 
 .spotify{
-	float: left;
-	background: #f0f0f0;
 	width: 100%;
+	background: #fff;
 	text-align: center;
-	padding: 30px;
+	padding: 40px;
+	margin-bottom: 30px;
 }
 
 .spotify .heading{
@@ -693,6 +702,7 @@ input{
 	display: inline-block;
 	padding: 0;
 	margin: 0;
+	margin-right: 20px;
 	font-family: 'GaramondPremrPro-It', serif;
 	color: #ccc;
 	text-align: right;
@@ -796,11 +806,36 @@ input{
 	color: #000;
 }
 
+.main > .link{
+	padding: 10px 15px;
+	font-size: 16px;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	z-index: 9999;
+}
+
+.main > .link:hover{
+	background: #6ECCAD;
+	color: #fff;
+}
+
+.main > .prev{
+	position: fixed;
+	left: 30px;
+	top: 50%;
+}
+
+.main > .next{
+	position: fixed;
+	right: 30px;
+	top: 50%;
+}
+
 .events {
 	position: relative;
 }
 
-.events .item .date{
+.events > .item .date{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -813,7 +848,7 @@ input{
 	z-index: 10;
 }
 	
-.events .event .header:before {
+.events > .event .header:before {
 	display: block;
     position: absolute;
     top: 0;
@@ -827,8 +862,8 @@ input{
 
 }
 	 
-.events .event .header:before,
-.events .event h2{
+.events > .event .header:before,
+.events > .event h2{
     transition: opacity 0.35s, transform 0.35s;
 }
 
@@ -837,7 +872,7 @@ input{
 	filter: alpha(opacity=50);
 }
  
-.events .event h2 {
+.events > .event h2 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1360,13 +1395,13 @@ input{
 .h-entry > .attach{
 	position: relative;
 	width: 100%;
-	height: 0;
+	max-width: 700px;
+	height: auto;
 	margin: 0 auto;
 	padding-top: 40%;
-	overflow: hidden;
 }
 
-.h-entry > .attach > img{
+.page > .h-entry > .attach > img{
 	width: 100%;
 	position: absolute;
 	top: 0;
@@ -1374,7 +1409,7 @@ input{
 	height: auto;
 }
 
-.h-entry figcaption{
+.page > .h-entry figcaption{
 	display: block;
 	position: absolute;
 	top: 0;
@@ -1390,18 +1425,18 @@ input{
 	width: 90%;
 	max-width: 700px;
 	margin: 0 auto;
+	padding: 0;
 }
 
 .profile .header{
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	margin: 0;
 	width: 100%;
-	padding: 30px 20px;
+	padding: 10px;
 	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 90%);
 	text-align: center;
 	font-family: 'GaramondPremrPro-It', serif;
 	font-size: 14px;
+	z-index: 9999999;
 }
 
 .header h1{
@@ -1563,6 +1598,31 @@ input{
 	border-bottom: 1px solid #999;
 }
 
+.h-entry > .link{
+	padding: 10px 15px;
+	font-size: 16px;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	z-index: 99999;
+}
+
+.h-entry > .link:hover{
+	background: #6ECCAD;
+	color: #fff;
+}
+
+.h-entry > .prev{
+	position: fixed;
+	left: 30px;
+	top: 50%;
+}
+
+.h-entry > .next{
+	position: fixed;
+	right: 30px;
+	top: 50%;
+}
+
 .profile .body{
 	font-family: 'GaramondPremrPro-Disp', serif;
 	font-size: 19px;
@@ -1571,7 +1631,6 @@ input{
 	padding-top: 100px;
 	color: #444;
 	margin: 0 auto;
-	margin-bottom: 80px;
 	max-width: 700px;
 	width: 90%;
 }
@@ -1609,7 +1668,7 @@ input{
 
 .h-entry .body .segment.gallery .slides .slide{
 	display: inline-block;
-	width: 32%;
+	width: 30%;
 	min-width: 25%;
 	height: auto;
 	margin-bottom: 3px;
@@ -1632,9 +1691,9 @@ input{
 .h-entry footer{
 	display: block;
 	margin: 0 auto;
-	background: #f0f0f0;
 	text-align: center;
 	padding: 0px;
+	margin-bottom: 50px;
 }
 
 .h-entry footer .byline{
@@ -1648,6 +1707,7 @@ input{
 	font-family: 'GaramondPremrPro-Disp', serif;
 	font-size: 13px;
 	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
 .h-entry footer .byline .content .heading{
@@ -1682,7 +1742,152 @@ and (max-width : 480px) {
 
 /* end profile */
 
+/* ---------------------------------------------- event-detail */
 
+.main.ui > .h-entry > .attach{
+	width: 100%;
+	max-width: 350px;
+	height: auto;
+	padding: 0;
+	overflow: visible;
+}
+
+.main.ui > .h-entry > .attach img{
+	width: 100%;
+	height: auto;
+}
+
+.main.ui > .h-entry > .link{
+	padding: 10px 15px;
+	font-size: 16px;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	z-index: 99999;
+}
+
+.main.ui > .h-entry > .link:hover{
+	background: #6ECCAD;
+	color: #fff;
+}
+
+.main.ui > .h-entry > .prev{
+	position: fixed;
+	left: 30px;
+	top: 50%;
+}
+
+.main.ui > .h-entry > .next{
+	position: fixed;
+	right: 30px;
+	top: 50%;
+}
+
+.main.ui > .h-entry > .attach > .caption{
+	font-family: 'GaramondPremrPro-It', serif;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	padding-top: 10px;
+	color: #666;
+}
+
+.content .header.card{
+	width: 100%;
+	max-width: 700px;
+	font-family: 'GaramondPremrPro-Disp', serif;
+	font-size: 16px;
+	padding: 0;
+	text-align: center;
+}
+
+.content .header.card .date,
+.content .header.card .location{
+	display: inline;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.content .header.card .location .link{
+	font-family: 'proxima_novasemibold', sans-serif;
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 0.5px;
+	border-bottom: 1px solid #999;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.content .header.card .location .link:hover{
+	color: #999;
+	border-bottom: 1px solid #333;
+}
+
+.content .header.card .menu{
+	list-style: none;
+	padding: 10px;
+	margin: 0;
+}
+
+.content .header.card .item{
+	display: inline-block;
+	font-family: 'proxima_novasemibold', sans-serif;
+	font-size: 13px;
+}
+
+.content .header.card .item .link{
+	padding: 5px 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.content .header.card .categories,
+.content .header.card .tags{
+	display: inline-block;
+}
+
+.content .header.card .categories .link{
+	background: #333;
+	border: 1px solid #333;
+	color: #fff;
+}
+
+.content .header.card .categories .link:hover{
+	background: #fff;
+	color: #333;
+}
+
+.content .header.card .tags .link{
+	background: #6ECCAD;
+	border: 1px solid #6ECCAD;
+	color: #fff;
+}
+
+.content .header.card .tags .link:hover{
+	background: #fff;
+	color: #6ECCAD;
+}
+
+.content .header.card .tags .link:before{
+	content: '# ';
+}
+
+.content .body{
+	font-family: 'GaramondPremrPro-Disp', serif;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+	margin-top: 30px;
+}
+
+.main.ui .footer{
+	background: #fff;
+}
+
+.main.ui .footer .heading{
+	margin: 0;
+}
 
 
 
