@@ -672,6 +672,80 @@ input{
 
 /* end home */
 
+/* ---------------------------------------------- blog-list */
+
+.items {
+	position: relative;
+}
+
+.items .item img{
+	max-width: 100%;
+	height: auto;
+}
+
+.items .item .date{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 15px;
+	font-family: 'proxima_novasemibold', sans-serif;
+	font-size: 15px;
+	background: rgba(0,0,0,0.7);
+	color: #fff;
+	margin: 0;
+	z-index: 10;
+}
+
+.items .item .header{
+	font-family: 'proxima_novasemibold', sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #333;
+	letter-spacing: 1px;
+}
+
+.items .item .heading{
+	font-family: 'GaramondPremrPro-It', serif;
+	font-weight: normal;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+	color: #555;
+}
+
+.items .item .heading > .link{
+	display: inline;
+	font-family: 'proxima_novasemibold', sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #999;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.items .item .heading > .link:hover{
+	color: #999;
+	border-bottom: 1px solid #333;
+}
+
+.items .item .heading p{
+	display: -webkit-box;
+	width: 300px;
+	font-size: 16px;
+	font-family: 'GaramondPremrPro-Disp', serif;
+	line-height: 1.4;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.items .item .header .permalink{
+	font-family: 'GaramondPremrPro-It', serif;
+}
+
+/* end blog-list */
+
 /* ---------------------------------------------- events */
 
 #calendar-show{
@@ -1386,6 +1460,155 @@ input{
 
 /* end event */
 
+/* ---------------------------------------------- event-detail */
+
+.main.ui > .h-entry > .attach{
+	width: 100%;
+	max-width: 350px;
+	height: auto;
+	padding: 0;
+	overflow: visible;
+}
+
+.main.ui > .h-entry > .attach img{
+	width: 100%;
+	height: auto;
+}
+
+.main.ui > .h-entry > .link{
+	padding: 10px 15px;
+	font-size: 16px;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	z-index: 99999;
+}
+
+.main.ui > .h-entry > .link:hover{
+	background: #6ECCAD;
+	color: #fff;
+}
+
+.main.ui > .h-entry > .prev{
+	position: fixed;
+	left: 30px;
+	top: 50%;
+}
+
+.main.ui > .h-entry > .next{
+	position: fixed;
+	right: 30px;
+	top: 50%;
+}
+
+.main.ui > .h-entry > .attach > .caption{
+	font-family: 'GaramondPremrPro-It', serif;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	padding-top: 10px;
+	color: #666;
+}
+
+.content .header.card{
+	width: 100%;
+	max-width: 700px;
+	font-family: 'GaramondPremrPro-Disp', serif;
+	font-size: 16px;
+	padding: 0;
+	text-align: center;
+}
+
+.content .header.card .date,
+.content .header.card .location{
+	display: inline;
+	padding: 5px;
+	margin: 10px;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.content .header.card .location .link{
+	font-family: 'proxima_novasemibold', sans-serif;
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 0.5px;
+	border-bottom: 1px solid #999;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.content .header.card .location .link:hover{
+	color: #999;
+	border-bottom: 1px solid #333;
+}
+
+.content .header.card .menu{
+	list-style: none;
+	padding: 10px;
+	margin: 0;
+}
+
+.content .header.card .item{
+	display: inline-block;
+	font-family: 'proxima_novasemibold', sans-serif;
+	font-size: 13px;
+}
+
+.content .header.card .item .link{
+	padding: 5px 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.content .header.card .categories,
+.content .header.card .tags{
+	display: inline-block;
+}
+
+.content .header.card .categories .link{
+	background: #333;
+	border: 1px solid #333;
+	color: #fff;
+}
+
+.content .header.card .categories .link:hover{
+	background: #fff;
+	color: #333;
+}
+
+.content .header.card .tags .link{
+	background: #6ECCAD;
+	border: 1px solid #6ECCAD;
+	color: #fff;
+}
+
+.content .header.card .tags .link:hover{
+	background: #fff;
+	color: #6ECCAD;
+}
+
+.content .header.card .tags .link:before{
+	content: '# ';
+}
+
+.content .body{
+	font-family: 'GaramondPremrPro-Disp', serif;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+	margin-top: 30px;
+}
+
+.main.ui .footer{
+	background: #fff;
+}
+
+.main.ui .footer .heading{
+	margin: 0;
+}
+
+/* event detail */
+
 /* ---------------------------------------------- profile */
 
 .h-entry{
@@ -1742,152 +1965,6 @@ and (max-width : 480px) {
 
 /* end profile */
 
-/* ---------------------------------------------- event-detail */
-
-.main.ui > .h-entry > .attach{
-	width: 100%;
-	max-width: 350px;
-	height: auto;
-	padding: 0;
-	overflow: visible;
-}
-
-.main.ui > .h-entry > .attach img{
-	width: 100%;
-	height: auto;
-}
-
-.main.ui > .h-entry > .link{
-	padding: 10px 15px;
-	font-size: 16px;
-	transition: all 0.2s ease-in-out;
-	-webkit-transition: all 0.2s ease-in-out;
-	z-index: 99999;
-}
-
-.main.ui > .h-entry > .link:hover{
-	background: #6ECCAD;
-	color: #fff;
-}
-
-.main.ui > .h-entry > .prev{
-	position: fixed;
-	left: 30px;
-	top: 50%;
-}
-
-.main.ui > .h-entry > .next{
-	position: fixed;
-	right: 30px;
-	top: 50%;
-}
-
-.main.ui > .h-entry > .attach > .caption{
-	font-family: 'GaramondPremrPro-It', serif;
-	font-size: 14px;
-	letter-spacing: 0.5px;
-	padding-top: 10px;
-	color: #666;
-}
-
-.content .header.card{
-	width: 100%;
-	max-width: 700px;
-	font-family: 'GaramondPremrPro-Disp', serif;
-	font-size: 16px;
-	padding: 0;
-	text-align: center;
-}
-
-.content .header.card .date,
-.content .header.card .location{
-	display: inline;
-	padding: 5px;
-	margin: 10px;
-	letter-spacing: 1px;
-	font-size: 15px;
-}
-
-.content .header.card .location .link{
-	font-family: 'proxima_novasemibold', sans-serif;
-	text-transform: uppercase;
-	font-size: 13px;
-	letter-spacing: 0.5px;
-	border-bottom: 1px solid #999;
-	transition: all 0.2s ease-in-out;
-	-webkit-transition: all 0.2s ease-in-out;
-}
-
-.content .header.card .location .link:hover{
-	color: #999;
-	border-bottom: 1px solid #333;
-}
-
-.content .header.card .menu{
-	list-style: none;
-	padding: 10px;
-	margin: 0;
-}
-
-.content .header.card .item{
-	display: inline-block;
-	font-family: 'proxima_novasemibold', sans-serif;
-	font-size: 13px;
-}
-
-.content .header.card .item .link{
-	padding: 5px 10px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	transition: all 0.2s ease-in-out;
-	-webkit-transition: all 0.2s ease-in-out;
-}
-
-.content .header.card .categories,
-.content .header.card .tags{
-	display: inline-block;
-}
-
-.content .header.card .categories .link{
-	background: #333;
-	border: 1px solid #333;
-	color: #fff;
-}
-
-.content .header.card .categories .link:hover{
-	background: #fff;
-	color: #333;
-}
-
-.content .header.card .tags .link{
-	background: #6ECCAD;
-	border: 1px solid #6ECCAD;
-	color: #fff;
-}
-
-.content .header.card .tags .link:hover{
-	background: #fff;
-	color: #6ECCAD;
-}
-
-.content .header.card .tags .link:before{
-	content: '# ';
-}
-
-.content .body{
-	font-family: 'GaramondPremrPro-Disp', serif;
-	font-size: 18px;
-	letter-spacing: 0.5px;
-	margin-top: 30px;
-}
-
-.main.ui .footer{
-	background: #fff;
-}
-
-.main.ui .footer .heading{
-	margin: 0;
-}
 
 
 
