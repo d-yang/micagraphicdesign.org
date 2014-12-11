@@ -19,127 +19,142 @@
         <link rel="stylesheet" href="css/helpers.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script type='text/javascript' src="js/grayscale.js"></script>
+		<script type='text/javascript' src="js/functions.js"></script>
+
     </head>
-    <body class="layout news list ui">
+    <body class="layout news list ui nagivation-push">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="canvas">
-          <div class="shim">
-
-            <header class="masthead" role="banner">
-              <div class="brand">
-              	<a class="mark" href="/" title="MICA Graphic Design">MICA Graphic Design</a>
-              </div> <!-- /.brand -->
-            
-            
-              <nav class="navigation menus" role="navigation">
-                <strong class="visuallyhidden">Main Navigation</strong>
-                <ul class="menu level-1" role="menubar">
+						<nav class="navigation menus" role="navigation" id="navigation">
+                <ul class="menu level-1" role="menubar" id="nav">
                   <li class="item">
                     <a href="#Events" class="link" title="Events">Events</a>
                   </li>
-                  <li class="item">
-                    <a href="#" class="link" title="Events">Blog</a>
+                  <li class="item current">
+                    <a href="#" class="link" title="Blog">Blog</a>
                   </li>
                   <li class="item">
-                    <a href="#" class="link" title="Events">Current Work</a>
+                    <a href="#" class="link" title="Current Work">Current Work</a>
                   </li>
-                  <li class="item dropdown ui">
+                  <li class="item">
                     <a href="#Profiles" class="link" title="Profiles">Profiles</a>
-                    <div class="dropdown content">
-                      <ul class="menu ui">
-                        <li class="item"><a href="#" class="link">Contributors</a></li>
-                        <li class="item"><a href="#" class="link">Students</a></li>
-                        <li class="item"><a href="#" class="link">Faculty</a></li>
-                      </ul>
-                    </div>
                   </li>
                   <li class="item">
                     <a href="#" class="link" title="Opportunities">Opportunities</a>
                   </li>
                 </ul><!-- /.menu -->
+                
+	                <nav class="utility menus">
+		                <ul class="menu">
+		                  <li class="item">
+		                    <a href="#News" class="link">News</a>
+		                  </li>
+		                  <li class="item">
+		                    <a href="#Archives" class="link">Archives</a>
+		                  </li>
+		                  <li class="item">
+		                    <a href="#About" class="link">About</a>
+		                  </li>
+		                  <li class="item">
+		                    <a href="#Contact" class="link">Contact</a>
+		                  </li>
+		                  <li class="item">
+		                    <a href="#Login" class="link">Login</a>
+		                  </li>
+		                </ul>
+		                
+		                
+		                <form action="#" class="form" role="search">
+		                  <div class="field">
+		                    <input id="masthead-search" type="text" placeholder="search the site" name="s"></div>
+		                  <div class="action">
+		                    <button class="control" type="submit">Search</button>
+		                  </div>
+		                </form>
+		            </nav><!-- /.utility menus -->
+		            
+		            <nav class="social menus">
+		                <ul class="menu">
+		                  <li class="item">
+		                    <a class="link" href="https://twitter.com/MICA_GD"  title="Twitter"><img src="img/twitter.png"></a>
+		                  </li>
+		                  <li class="item">
+		                    <a class="link" href="http://micagraphicdesign.tumblr.com/"  title="Tumblr"><img src="img/tumblr.png"></a>
+		                  </li>
+		                  <li class="item">
+		                    <a class="link" href="http://vimeo.com/micagd"  title="Vimeo"><img src="img/vimeo.png"></a>
+		                  </li>
+		                  <li class="item">
+		                    <a class="link" href="http://portfolios.mica.edu/search?mica_major=797&amp;field=&amp;content=projects&amp;sort=&amp;time=week"  title="Behance"><img src="img/behance.png"></a>
+		                  </li>
+		                  <li class="item">
+		                    <a class="link" href="http://flickr.com/groups/gdmica"  title="Flickr"><img src="img/flickr.png"></a>
+		                  </li>
+		                </ul>
+		           </nav>     
               </nav>
+
+
+        <div class="canvas">
+          <div class="shim">
+
+            <header class="masthead" role="banner">
+            <button id="showLeftPush">&#9776;</button>
+              <h1 class="heading">News</h1>
+              <div class="brand">
+              	<a class="mark" href="/" title="MICA Graphic Design">MICA Graphic Design</a>
+              </div> <!-- /.brand -->
             
             
-              <nav class="utility menus">
-                <ul class="menu">
-                  <li class="item">
-                    <a href="#News" class="link">News</a>
-                  </li>
-                  <li class="item">
-                    <a href="#Archives" class="link">Archives</a>
-                  </li>
-                  <li class="item dropdown ui">
-                    <a href="#About" class="link">About</a>
-                    <div class="dropdown content">
-                      <ul class="menu ui">
-                        <li class="item"><a href="#" class="link">Purpose</a></li>
-                        <li class="item"><a href="#" class="link">MICA Design League</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <a href="#Contact" class="link">Contact</a>
-                  </li>
-                  <li class="item">
-                    <a href="#Login" class="link">Login</a>
-                  </li>
-                </ul>
-            
-            
-                <form action="#" class="form" role="search">
-                  <div class="field">
-                    <label for="masthead-search"></label>
-                    <input id="masthead-search" type="text" placeholder="Search the Site" name="s"></div>
-                  <div class="action">
-                    <button class="control" type="submit">Search</button>
-                  </div>
-                </form>
-              </nav><!-- /.utility menus -->
-            
-              <nav class="social menus">
-                <ul class="menu">
-                  <li class="item">
-                    <a class="link" href="https://twitter.com/MICA_GD"  title="Twitter">Twitter</a>
-                  </li>
-                  <li class="item">
-                    <a class="link" href="http://micagraphicdesign.tumblr.com/"  title="Tumblr">Tumbler</a>
-                  </li>
-                  <li class="item">
-                    <a class="link" href="http://vimeo.com/micagd"  title="Vimeo">Vimeo</a>
-                  </li>
-                  <li class="item">
-                    <a class="link" href="http://portfolios.mica.edu/search?mica_major=797&amp;field=&amp;content=projects&amp;sort=&amp;time=week"  title="Behance">Behance</a>
-                  </li>
-                  <li class="item">
-                    <a class="link" href="http://flickr.com/groups/gdmica"  title="Flickr">Flickr</a>
-                  </li>
-                </ul>
-              </nav></header><!-- /.masthead -->
+			  	</header><!-- /.masthead -->
 
 
             <main class="page" role="main">
             
 <div class="main content ui">
-  <h1 class="page heading ui">News</h1>
+	<a class="prev link" href="#">&#8592;</a>
+    <a class="next link" href="#">&#8594;</a>
+  <div class="sub">
+  <nav class="formats menus segment">
+    <ul class="menu">
+      <li><h2 class="heading">lectures</h2>
+      </li> /
+      <li><h2 class="heading">exhibitions</h2>
+	  </li> /
+	  <li><h2 class="heading">workshops</h2>
+      </li> / 
+      <li><a href="#" class="button archive"><h2 class="heading">view all</h2></a></li>
+    </ul>
+  </nav> <!-- /.formats -->
+
+</div> <!-- /.sub -->
 
   <!--  ====================================================================
   Featured News Post
   =====================================================================  -->
   <div class="news lede ui">
     <div class="attach ui">
-      <a href="#" class="permalink">
+      <a href="#" class="link">
         <img src="http://lorempixel.com/600/600" alt="" class="src"></a>
     </div> <!-- /.attach -->
     <div class="content">
       <div class="header">
         <h2 class="heading">
-          <a href="#" class="permalink">Featured news Post</a>
+          <a href="#" class="permalink">Featured Blog Post</a>
         </h2> <!-- /.heading -->
         <div class="meta">
           <p class="date">Oct 12 2014 12:00 PM</p>
+                  <nav class="categories ui">
+          <a href="#" class="category">Lecture</a>
+          <a href="#" class="category">On Campus</a>
+        </nav>
+        <nav class="tags ui">
+          <a href="#" class="tag">Typography</a>
+        </nav>
+
         </div> <!-- /.meta -->
         <div class="byline"><em class="story">Post by:</em> <a class="link" href="#heather">Heather Kohlberger</a></div>
       </div><!-- /.header -->
@@ -148,17 +163,9 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.
         </p>
       </div><!-- /.copy -->
-      <div class="footer">
-        <nav class="categories ui">
-          <a href="#" class="category">Lecture</a>
-          <a href="#" class="category">On Campus</a>
-        </nav>
-        <nav class="tags ui">
-          <a href="#" class="tag">Typography</a>
-        </nav>
-      </div> <!-- /.footer -->
     </div><!-- /.content -->
   </div><!-- /.lede -->
+
 
   <!--  ====================================================================
   news List
@@ -166,27 +173,16 @@
   <div class="items posts ui">
     <div class="items list ui">
 
-      <div class="item post ui" id="post-1">
-        <div class="item attach ui">
-          <a href="#" class="permalink">
-            <img class="src" src="http://lorempixel.com/600/600" alt=""></a>
-        </div> <!-- /.attach -->
-        <div class="content">
-          <div class="header">
-            <h2 class="heading">
-              <a href="#" class="permalink">news Post Item 1</a>
-            </h2> <!-- /.heading -->
-            <div class="meta">
-              <p class="date">Oct 12 2014 12:00 PM</p>
-            </div> <!-- /.meta -->
-            <div class="byline"><em class="story">Post by:</em> <a class="link" href="#heather">Heather Kohlberger</a></div>
-          </div> <!-- /.header -->
-          <div class="copy">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.
-            </p>
-          </div> <!-- /.content -->
-          <div class="footer">
+		<div class="item post ui" id="post-1">
+		<p class="date">10.16.'14</p>
+		<span class="content">
+      	<a href="#" style="display: block;">
+      	<img src="http://lorempixel.com/600/600" alt=""></a>
+        <p class="header">
+        News Post Item 1
+			<h2 class="heading">
+            posted by: <a class="link" href="#">Heather Kohlberger</a>
+                      <div class="footer">
             <nav class="categories">
               <a href="#" class="category">Lecture</a>
               <a href="#" class="category">On Campus</a>
@@ -195,94 +191,25 @@
               <a href="#" class="tag">Typography</a>
             </nav>
           </div> <!-- /.footer -->
-        </div> <!-- /.content -->
-      </div> <!-- /.item.post#post-1 -->
+            <p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.</p>
+			</h2>
 
-      <div class="item post ui" id="post-2">
-        <div class="item attach ui">
-          <a href="#" class="permalink">
-            <img class="src" src="http://lorempixel.com/600/600" alt=""></a>
-        </div> <!-- /.attach -->
-        <div class="content">
-          <div class="header">
-            <h2 class="heading">
-              <a href="#" class="permalink">news Post Item 1</a>
-            </h2> <!-- /.heading -->
-            <div class="meta">
-              <p class="date">Oct 12 2014 12:00 PM</p>
-            </div> <!-- /.meta -->
-            <div class="byline"><em class="story">Post by:</em> <a class="link" href="#heather">Heather Kohlberger</a></div>
-          </div> <!-- /.header -->
-          <div class="copy">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.
-            </p>
-          </div> <!-- /.content -->
-          <div class="footer">
-            <nav class="categories">
-              <a href="#" class="category">Lecture</a>
-              <a href="#" class="category">On Campus</a>
-            </nav>
-            <nav class="tags">
-              <a href="#" class="tag">Typography</a>
-            </nav>
-          </div> <!-- /.footer -->
-        </div> <!-- /.content -->
-      </div> <!-- /.item.post#post-2 -->
+        </p> <!-- /.header -->
+		<a class="permalink" href="#">read more &#8594;</a>
+		</span> <!-- /.content --></div> <!-- /.item.event -->
 
-      <div class="item post ui" id="post-3">
-        <div class="item attach ui">
-          <a href="#" class="permalink">
-            <img class="src" src="http://lorempixel.com/600/600" alt=""></a>
-        </div> <!-- /.attach -->
-        <div class="content">
-          <div class="header">
-            <h2 class="heading">
-              <a href="#" class="permalink">news Post Item 3</a>
-            </h2> <!-- /.heading -->
-            <div class="meta">
-              <p class="date">Oct 12 2014 12:00 PM</p>
-            </div> <!-- /.meta -->
-            <div class="byline"><em class="story">Post by:</em> <a class="link" href="#heather">Heather Kohlberger</a></div>
-          </div> <!-- /.header -->
-          <div class="copy">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.
-            </p>
-          </div> <!-- /.content -->
-          <div class="footer">
-            <nav class="categories">
-              <a href="#" class="category">Lecture</a>
-              <a href="#" class="category">On Campus</a>
-            </nav>
-            <nav class="tags">
-              <a href="#" class="tag">Typography</a>
-            </nav>
-          </div> <!-- /.footer -->
-        </div> <!-- /.content -->
-      </div> <!-- /.item.post#post-3 -->
 
-      <div class="item post ui" id="post-4">
-        <div class="item attach ui">
-          <a href="#" class="permalink">
-            <img class="src" src="http://lorempixel.com/600/600" alt=""></a>
-        </div> <!-- /.attach -->
-        <div class="content">
-          <div class="header">
-            <h2 class="heading">
-              <a href="#" class="permalink">news Post Item 4</a>
-            </h2> <!-- /.heading -->
-            <div class="meta">
-              <p class="date">Oct 12 2014 12:00 PM</p>
-            </div> <!-- /.meta -->
-            <div class="byline"><em class="story">Post by:</em> <a class="link" href="#heather">Heather Kohlberger</a></div>
-          </div> <!-- /.header -->
-          <div class="copy">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.
-            </p>
-          </div> <!-- /.content -->
-          <div class="footer">
+		<div class="item post ui" id="post-2">
+		<p class="date">10.16.'14</p>
+		<span class="content">
+      	<a href="#" style="display: block;">
+      	<img src="http://lorempixel.com/600/600" alt=""></a>
+        <p class="header">
+        News Post Item 1
+			<h2 class="heading">
+            posted by: <a class="link" href="#">Heather Kohlberger</a>
+                      <div class="footer">
             <nav class="categories">
               <a href="#" class="category">Lecture</a>
               <a href="#" class="category">On Campus</a>
@@ -291,62 +218,24 @@
               <a href="#" class="tag">Typography</a>
             </nav>
           </div> <!-- /.footer -->
-        </div> <!-- /.content -->
-      </div> <!-- /.item.post#post-4 -->
+            <p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.</p>
+			</h2>
 
-      <div class="item post ui" id="post-5">
-        <div class="item attach ui">
-          <a href="#" class="permalink">
-            <img class="src" src="http://lorempixel.com/600/600" alt=""></a>
-        </div> <!-- /.attach -->
-        <div class="content">
-          <div class="header">
-            <h2 class="heading">
-              <a href="#" class="permalink">news Post Item 5</a>
-            </h2> <!-- /.heading -->
-            <div class="meta">
-              <p class="date">Oct 12 2014 12:00 PM</p>
-            </div> <!-- /.meta -->
-            <div class="byline"><em class="story">Post by:</em> <a class="link" href="#heather">Heather Kohlberger</a></div>
-          </div> <!-- /.header -->
-          <div class="copy">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.
-            </p>
-          </div> <!-- /.content -->
-          <div class="footer">
-            <nav class="categories">
-              <a href="#" class="category">Lecture</a>
-              <a href="#" class="category">On Campus</a>
-            </nav>
-            <nav class="tags">
-              <a href="#" class="tag">Typography</a>
-            </nav>
-          </div> <!-- /.footer -->
-        </div> <!-- /.content -->
-      </div> <!-- /.item.post#post-5 -->
+        </p> <!-- /.header -->
+		<a class="permalink" href="#">read more &#8594;</a>
+		</span> <!-- /.content --></div> <!-- /.item.event -->
 
-      <div class="item post ui" id="post-6">
-        <div class="item attach ui">
-          <a href="#" class="permalink">
-            <img class="src" src="http://lorempixel.com/600/600" alt=""></a>
-        </div> <!-- /.attach -->
-        <div class="content">
-          <div class="header">
-            <h2 class="heading">
-              <a href="#" class="permalink">news Post Item 6</a>
-            </h2> <!-- /.heading -->
-            <div class="meta">
-              <p class="date">Oct 12 2014 12:00 PM</p>
-            </div> <!-- /.meta -->
-            <div class="byline"><em class="story">Post by:</em> <a class="link" href="#heather">Heather Kohlberger</a></div>
-          </div> <!-- /.header -->
-          <div class="copy">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.
-            </p>
-          </div> <!-- /.content -->
-          <div class="footer">
+		<div class="item post ui" id="post-3">
+		<p class="date">10.16.'14</p>
+		<span class="content">
+      	<a href="#" style="display: block;">
+      	<img src="http://lorempixel.com/600/600" alt=""></a>
+        <p class="header">
+        News Post Item 1
+			<h2 class="heading">
+            posted by: <a class="link" href="#">Heather Kohlberger</a>
+                      <div class="footer">
             <nav class="categories">
               <a href="#" class="category">Lecture</a>
               <a href="#" class="category">On Campus</a>
@@ -355,62 +244,24 @@
               <a href="#" class="tag">Typography</a>
             </nav>
           </div> <!-- /.footer -->
-        </div> <!-- /.content -->
-      </div> <!-- /.item.post#post-6 -->
+            <p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.</p>
+			</h2>
 
-      <div class="item post ui" id="post-7">
-        <div class="item attach ui">
-          <a href="#" class="permalink">
-            <img class="src" src="http://lorempixel.com/600/600" alt=""></a>
-        </div> <!-- /.attach -->
-        <div class="content">
-          <div class="header">
-            <h2 class="heading">
-              <a href="#" class="permalink">news Post Item 7</a>
-            </h2> <!-- /.heading -->
-            <div class="meta">
-              <p class="date">Oct 12 2014 12:00 PM</p>
-            </div> <!-- /.meta -->
-            <div class="byline"><em class="story">Post by:</em> <a class="link" href="#heather">Heather Kohlberger</a></div>
-          </div> <!-- /.header -->
-          <div class="copy">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.
-            </p>
-          </div> <!-- /.content -->
-          <div class="footer">
-            <nav class="categories">
-              <a href="#" class="category">Lecture</a>
-              <a href="#" class="category">On Campus</a>
-            </nav>
-            <nav class="tags">
-              <a href="#" class="tag">Typography</a>
-            </nav>
-          </div> <!-- /.footer -->
-        </div> <!-- /.content -->
-      </div> <!-- /.item.post#post-7 -->
+        </p> <!-- /.header -->
+		<a class="permalink" href="#">read more &#8594;</a>
+		</span> <!-- /.content --></div> <!-- /.item.event -->
 
-      <div class="item post ui" id="post-8">
-        <div class="item attach ui">
-          <a href="#" class="permalink">
-            <img class="src" src="http://lorempixel.com/600/600" alt=""></a>
-        </div> <!-- /.attach -->
-        <div class="content">
-          <div class="header">
-            <h2 class="heading">
-              <a href="#" class="permalink">news Post Item 8</a>
-            </h2> <!-- /.heading -->
-            <div class="meta">
-              <p class="date">Oct 12 2014 12:00 PM</p>
-            </div> <!-- /.meta -->
-            <div class="byline"><em class="story">Post by:</em> <a class="link" href="#heather">Heather Kohlberger</a></div>
-          </div> <!-- /.header -->
-          <div class="copy">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.
-            </p>
-          </div> <!-- /.content -->
-          <div class="footer">
+		<div class="item post ui" id="post-4">
+		<p class="date">10.16.'14</p>
+		<span class="content">
+      	<a href="#" style="display: block;">
+      	<img src="http://lorempixel.com/600/600" alt=""></a>
+        <p class="header">
+        News Post Item 1
+			<h2 class="heading">
+            posted by: <a class="link" href="#">Heather Kohlberger</a>
+                      <div class="footer">
             <nav class="categories">
               <a href="#" class="category">Lecture</a>
               <a href="#" class="category">On Campus</a>
@@ -419,62 +270,24 @@
               <a href="#" class="tag">Typography</a>
             </nav>
           </div> <!-- /.footer -->
-        </div> <!-- /.content -->
-      </div> <!-- /.item.post#post-8 -->
+            <p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.</p>
+			</h2>
 
-      <div class="item post ui" id="post-9">
-        <div class="item attach ui">
-          <a href="#" class="permalink">
-            <img class="src" src="http://lorempixel.com/600/600" alt=""></a>
-        </div> <!-- /.attach -->
-        <div class="content">
-          <div class="header">
-            <h2 class="heading">
-              <a href="#" class="permalink">news Post Item 9</a>
-            </h2> <!-- /.heading -->
-            <div class="meta">
-              <p class="date">Oct 12 2014 12:00 PM</p>
-            </div> <!-- /.meta -->
-            <div class="byline"><em class="story">Post by:</em> <a class="link" href="#heather">Heather Kohlberger</a></div>
-          </div> <!-- /.header -->
-          <div class="copy">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.
-            </p>
-          </div> <!-- /.content -->
-          <div class="footer">
-            <nav class="categories">
-              <a href="#" class="category">Lecture</a>
-              <a href="#" class="category">On Campus</a>
-            </nav>
-            <nav class="tags">
-              <a href="#" class="tag">Typography</a>
-            </nav>
-          </div> <!-- /.footer -->
-        </div> <!-- /.content -->
-      </div> <!-- /.item.post#post-9 -->
+        </p> <!-- /.header -->
+		<a class="permalink" href="#">read more &#8594;</a>
+		</span> <!-- /.content --></div> <!-- /.item.event -->
 
-      <div class="item post ui" id="post-10">
-        <div class="item attach ui">
-          <a href="#" class="permalink">
-            <img class="src" src="http://lorempixel.com/600/600" alt=""></a>
-        </div> <!-- /.attach -->
-        <div class="content">
-          <div class="header">
-            <h2 class="heading">
-              <a href="#" class="permalink">news Post Item 10</a>
-            </h2> <!-- /.heading -->
-            <div class="meta">
-              <p class="date">Oct 12 2014 12:00 PM</p>
-            </div> <!-- /.meta -->
-            <div class="byline"><em class="story">Post by:</em> <a class="link" href="#heather">Heather Kohlberger</a></div>
-          </div> <!-- /.header -->
-          <div class="copy">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.
-            </p>
-          </div> <!-- /.content -->
-          <div class="footer">
+		<div class="item post ui" id="post-5">
+		<p class="date">10.16.'14</p>
+		<span class="content">
+      	<a href="#" style="display: block;">
+      	<img src="http://lorempixel.com/600/600" alt=""></a>
+        <p class="header">
+        News Post Item 1
+			<h2 class="heading">
+            posted by: <a class="link" href="#">Heather Kohlberger</a>
+                      <div class="footer">
             <nav class="categories">
               <a href="#" class="category">Lecture</a>
               <a href="#" class="category">On Campus</a>
@@ -483,21 +296,145 @@
               <a href="#" class="tag">Typography</a>
             </nav>
           </div> <!-- /.footer -->
-        </div> <!-- /.content -->
-      </div> <!-- /.item.post#post-10 -->
+            <p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.</p>
+			</h2>
+
+        </p> <!-- /.header -->
+		<a class="permalink" href="#">read more &#8594;</a>
+		</span> <!-- /.content --></div> <!-- /.item.event -->
+
+		<div class="item post ui" id="post-6">
+		<p class="date">10.16.'14</p>
+		<span class="content">
+      	<a href="#" style="display: block;">
+      	<img src="http://lorempixel.com/600/600" alt=""></a>
+        <p class="header">
+        News Post Item 1
+			<h2 class="heading">
+            posted by: <a class="link" href="#">Heather Kohlberger</a>
+                      <div class="footer">
+            <nav class="categories">
+              <a href="#" class="category">Lecture</a>
+              <a href="#" class="category">On Campus</a>
+            </nav>
+            <nav class="tags">
+              <a href="#" class="tag">Typography</a>
+            </nav>
+          </div> <!-- /.footer -->
+            <p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.</p>
+			</h2>
+
+        </p> <!-- /.header -->
+		<a class="permalink" href="#">read more &#8594;</a>
+		</span> <!-- /.content --></div> <!-- /.item.event -->
+
+		<div class="item post ui" id="post-7">
+		<p class="date">10.16.'14</p>
+		<span class="content">
+      	<a href="#" style="display: block;">
+      	<img src="http://lorempixel.com/600/600" alt=""></a>
+        <p class="header">
+        News Post Item 1
+			<h2 class="heading">
+            posted by: <a class="link" href="#">Heather Kohlberger</a>
+                      <div class="footer">
+            <nav class="categories">
+              <a href="#" class="category">Lecture</a>
+              <a href="#" class="category">On Campus</a>
+            </nav>
+            <nav class="tags">
+              <a href="#" class="tag">Typography</a>
+            </nav>
+          </div> <!-- /.footer -->
+            <p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.</p>
+			</h2>
+
+        </p> <!-- /.header -->
+		<a class="permalink" href="#">read more &#8594;</a>
+		</span> <!-- /.content --></div> <!-- /.item.event -->
+
+		<div class="item post ui" id="post-8">
+		<p class="date">10.16.'14</p>
+		<span class="content">
+      	<a href="#" style="display: block;">
+      	<img src="http://lorempixel.com/600/600" alt=""></a>
+        <p class="header">
+        News Post Item 1
+			<h2 class="heading">
+            posted by: <a class="link" href="#">Heather Kohlberger</a>
+                      <div class="footer">
+            <nav class="categories">
+              <a href="#" class="category">Lecture</a>
+              <a href="#" class="category">On Campus</a>
+            </nav>
+            <nav class="tags">
+              <a href="#" class="tag">Typography</a>
+            </nav>
+          </div> <!-- /.footer -->
+            <p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.</p>
+			</h2>
+
+        </p> <!-- /.header -->
+		<a class="permalink" href="#">read more &#8594;</a>
+		</span> <!-- /.content --></div> <!-- /.item.event -->
+
+		<div class="item post ui" id="post-9">
+		<p class="date">10.16.'14</p>
+		<span class="content">
+      	<a href="#" style="display: block;">
+      	<img src="http://lorempixel.com/600/600" alt=""></a>
+        <p class="header">
+        News Post Item 1
+			<h2 class="heading">
+            posted by: <a class="link" href="#">Heather Kohlberger</a>
+                      <div class="footer">
+            <nav class="categories">
+              <a href="#" class="category">Lecture</a>
+              <a href="#" class="category">On Campus</a>
+            </nav>
+            <nav class="tags">
+              <a href="#" class="tag">Typography</a>
+            </nav>
+          </div> <!-- /.footer -->
+            <p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.</p>
+			</h2>
+
+        </p> <!-- /.header -->
+		<a class="permalink" href="#">read more &#8594;</a>
+		</span> <!-- /.content --></div> <!-- /.item.event -->
+
+		<div class="item post ui" id="post-10">
+		<p class="date">10.16.'14</p>
+		<span class="content">
+      	<a href="#" style="display: block;">
+      	<img src="http://lorempixel.com/600/600" alt=""></a>
+        <p class="header">
+        News Post Item 1
+			<h2 class="heading">
+            posted by: <a class="link" href="#">Heather Kohlberger</a>
+                      <div class="footer">
+            <nav class="categories">
+              <a href="#" class="category">Lecture</a>
+              <a href="#" class="category">On Campus</a>
+            </nav>
+            <nav class="tags">
+              <a href="#" class="tag">Typography</a>
+            </nav>
+          </div> <!-- /.footer -->
+            <p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident sunt dolore, laborum illum laboriosam laudantium, consequuntur necessitatibus veritatis impedit non rerum, dignissimos illo expedita quam amet totam fugit eveniet.</p>
+			</h2>
+
+        </p> <!-- /.header -->
+		<a class="permalink" href="#">read more &#8594;</a>
+		</span> <!-- /.content --></div> <!-- /.item.event -->
 
     </div><!-- /.items list -->
-    <nav class="items pagination menus ui">
-      <strong class="menus title">news Pagination</strong>
-      <ul class="menu ui">
-        <li class="item">
-          <a href="#" class="prev page link">Previous</a>
-        </li>
-        <li class="item">
-          <a href="#" class="next page link">Next</a>
-        </li>
-      </ul>
-    </nav><!-- /.items pagination -->
   </div><!-- /.items posts ui -->
 </div> <!-- /.main.content.ui -->
 
@@ -507,33 +444,23 @@
     <div class="email" id="mc_embed_signup">
     <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <div id="mc_embed_signup_scroll">
-      <h2>Subscribe to our mailing list</h2>
+      <h2>Subscribe to our mailing list!</h2>
     <div class="mc-field-group">
-      <label for="mce-EMAIL">Email Address </label>
-      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+      <input type="email" value="" placeholder="e-mail address" name="EMAIL" class="required email" id="mce-EMAIL">
+      <input type="submit" value="Sign Up" placeholder="e-mail" name="subscribe" id="mc-embedded-subscribe" class="button">
     </div>
-      <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
       </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
         <div style="position: absolute; left: -5000px;"><input type="text" name="b_e16fe3f86f4146722d64dcc06_bfe8fc4b48" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
         </div>
+        <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
     </form>
     </div>
     
     <!--End mc_embed_signup-->
     <a href="#" class="rss">Subscribe to RSS</a>
   </div> <!-- /.subscribe -->
-  <nav class="categories menus segment ui">
-    <strong class="menus title">Categories</strong>
-    <ul class="menu">
-      <li class="item"><a href="#" class="category link">Lecture</a></li>
-      <li class="item"><a href="#" class="category link">Exhibition</a></li>
-      <li class="item"><a href="#" class="category link">Workshop</a></li>
-    </ul>
-  </nav> <!-- /.categories -->
-  <div class="archives segment"><a href="#" class="button archive">View All news Posts</a></div>
 </div><!-- /.sub content ui -->
 
             </main><!-- /.page -->
@@ -542,8 +469,8 @@
 
           <footer class="footer">
           
-            <nav class="departments menus ui">
-            	<ul class="menu ui">
+            <nav class="departments menus">
+            	<ul class="menu">
             		<li class="item">
             			<a class="link" href="http://www.mica.edu" title="MICA.edu">MICA.edu</a>
             		</li>
@@ -553,10 +480,11 @@
             		<li class="item">
             			<a class="link" href="http://micagraphicdesignpb.org/" title="post-bac">Post-Bac GD</a>
             		</li>
+            		<li class="item">
+            			<p class="legal">&copy; Maryland Institute College of Art</p>
+            		</li>
             	</ul>
             </nav>
-          
-            <p class="legal">&copy; Maryland Institute College of Art</p>
           </footer><!-- /.footer -->        </div><!-- /.canvas -->
 
 
@@ -564,6 +492,63 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+				        <script src="js/classie.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'navigation' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				body = document.body;
+
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'navigation-push-toright' );
+				classie.toggle( menuLeft, 'navigation-open' );
+				disableOther( 'showLeftPush' );
+			};
+
+
+			function disableOther( button ) {
+
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				}
+			}
+		</script>
+        <script type="text/javascript" src="js/jquery.wookmark.js"></script>
+		<script src="js/jquery.imagesloaded.js"></script>
+		<script type="text/javascript">
+	    (function ($){
+	      $('.main .items').imagesLoaded(function() {
+
+	        var options = {
+	          itemWidth: 250,
+	          autoResize: true, 
+	          container: $('.main .items'),
+	          offset: 10, 
+	          outerOffset: 5, 
+	          flexibleWidth: '50%' 
+	        };
+	
+
+	        var handler = $('.main .items .item');
+	
+	        var $window = $(window);
+	        $window.resize(function() {
+	          var windowWidth = $window.width(),
+	              newOptions = { flexibleWidth: '50%' };
+	
+	          // Breakpoint
+	          if (windowWidth < 1024) {
+	            newOptions.flexibleWidth = '100%';
+	          }
+	
+	          handler.wookmark(newOptions);
+	        });
+	
+	        // Call the layout function.
+	        handler.wookmark(options);
+	      });
+	    })(jQuery);
+	  </script>	 
 
     </body>
 </html>

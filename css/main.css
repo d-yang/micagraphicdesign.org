@@ -273,8 +273,8 @@ textarea {
 }
 
 .main{
-	max-width: 1000px;
 	width: 100%;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -674,6 +674,77 @@ input{
 
 /* ---------------------------------------------- blog-list */
 
+.main .content .header{
+	text-align: center;
+}
+
+.main .content .header .meta{
+	text-align: center;
+}
+
+.main .content .header .meta p{
+	display: inline-block;
+	font-family: 'GaramondPremrPro-Disp', serif;
+	letter-spacing: 0.5px;
+}
+
+.main .content nav{
+	display: inline-block;
+	text-align: center;
+	vertical-align: center;
+}
+
+.lede{
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.lede .header{
+	text-align: center;
+}
+
+
+.lede .attach{
+	width: 100%;
+	overflow:hidden;
+	height: 250px;
+}
+
+.lede img{
+	width: 100%;
+	max-width: 1000px;
+	height: auto;
+}
+
+.lede .header .date{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: 'proxima_novasemibold', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.lede .content .heading{
+	font-family: 'proxima_novasemibold', sans-serif;
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-int-out;
+}
+
+.lede .content .heading:hover{
+	color: #6ECCAD;
+}
+
+.lede .copy{
+	font-family: 'GaramondPremrPro-Disp', serif;
+	font-size: 17px;
+	color: #333;
+	letter-spacing: 0.5px;
+}
+
 .items {
 	position: relative;
 }
@@ -683,6 +754,7 @@ input{
 	height: auto;
 }
 
+.lede .date,
 .items .item .date{
 	position: absolute;
 	top: 0;
@@ -704,6 +776,7 @@ input{
 	letter-spacing: 1px;
 }
 
+.blog.lede .byline,
 .items .item .heading{
 	font-family: 'GaramondPremrPro-It', serif;
 	font-weight: normal;
@@ -712,7 +785,8 @@ input{
 	color: #555;
 }
 
-.items .item .heading > .link{
+.blog.lede .link,
+.items .item .heading .link{
 	display: inline;
 	font-family: 'proxima_novasemibold', sans-serif;
 	font-size: 12px;
@@ -740,8 +814,95 @@ input{
 	text-overflow: ellipsis;
 }
 
-.items .item .header .permalink{
-	font-family: 'GaramondPremrPro-It', serif;
+.items .item .permalink{
+	display: inline-block;
+	margin-left: 200px;
+	padding: 5px 10px;
+	font-family: 'proxima_novalight', serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #777;
+	text-align: center;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.items .item .permalink:hover{
+	background: #6ECCAD;
+	color: #fff;
+}
+
+.pagination{
+	padding: 50px 0 0 0;
+	width: 100%;
+	text-align: center;
+}
+
+.pagination .menu{
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.pagination .menu{
+	display: inline-block;
+	list-style: none;
+	margin: 0 auto;
+}
+
+.pagination .menu .item{
+	display: inline-block;
+	padding: 5px 7px;
+	font-family: 'proxima_novalight', sans-serif;
+	font-size: 12px;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.pagination .menu .item:hover{
+	background: #ddd;
+}
+
+.content .body{
+	font-family: 'GaramondPremrPro-Disp', serif;
+	font-size: 19px;
+	line-height: 29px;
+	letter-spacing: 0.5px;
+	color: #444;
+	margin: 0 auto;
+	max-width: 700px;
+	width: 90%;
+}
+
+/* end blog-list */
+
+/* ---------------------------------------------- news */
+
+.main .h-entry > .attach{
+	width: 100%;
+}
+
+.main .h-entry > .attach > img{
+	width: 100%:
+	height: auto;
+}
+
+/* end news */
+
+/* ---------------------------------------------- news */
+
+.items .item .content .footer{
+	padding: 15px 0;
+}
+
+.items .item .content .footer .category,
+.items .item .content .footer .tag{
+	padding: 5px 8px;
+	font-size: 12px;
 }
 
 /* end blog-list */
@@ -894,6 +1055,7 @@ input{
 }
 
 .main > .prev{
+	font-family: 'proxima_novasemibold', sans-serif;
 	position: fixed;
 	left: 30px;
 	top: 50%;
@@ -1462,14 +1624,16 @@ input{
 
 /* ---------------------------------------------- event-detail */
 
+.content > .h-entry > .attach,
 .main.ui > .h-entry > .attach{
 	width: 100%;
-	max-width: 350px;
+	max-width: 400px;
 	height: auto;
 	padding: 0;
 	overflow: visible;
 }
 
+.content > .h-entry > .attach img,
 .main.ui > .h-entry > .attach img{
 	width: 100%;
 	height: auto;
@@ -1489,12 +1653,14 @@ input{
 }
 
 .main.ui > .h-entry > .prev{
+	font-family: 'proxima_novasemibold', sans-serif;
 	position: fixed;
 	left: 30px;
 	top: 50%;
 }
 
 .main.ui > .h-entry > .next{
+	font-family: 'proxima_novasemibold', sans-serif;
 	position: fixed;
 	right: 30px;
 	top: 50%;
@@ -1515,6 +1681,7 @@ input{
 	font-size: 16px;
 	padding: 0;
 	text-align: center;
+	margin-bottom: 50px;
 }
 
 .content .header.card .date,
@@ -1607,28 +1774,29 @@ input{
 	margin: 0;
 }
 
+.blog.lede .footer{
+	margin-top: -20px;
+}
+
 /* event detail */
 
 /* ---------------------------------------------- profile */
 
 .h-entry{
-	margin-top: 50px;
+
 }
 
 .h-entry > .attach{
-	position: relative;
 	width: 100%;
-	max-width: 700px;
+	position: relative;
+	max-width: 600px;
 	height: auto;
 	margin: 0 auto;
-	padding-top: 40%;
+	overflow: hidden;
 }
 
 .page > .h-entry > .attach > img{
 	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
 	height: auto;
 }
 
@@ -1670,6 +1838,7 @@ input{
 	margin: 0;
 	padding-top: 50px;
 	line-hegiht: 10px;
+	text-align: center;
 }
 
 .profile .header .date{
@@ -1681,10 +1850,14 @@ input{
 	margin: 0 5px;
 }
 
+.content.content. .date sup,
 .profile .header .date sup{
 	font-size: 10px;
 }
 
+.content.content .byline,
+.content.content .categories,
+.content.content .tags,
 .profile .header .categories,
 .profile .header .tags,
 .profile .header .byline{
@@ -1696,40 +1869,49 @@ input{
 	margin-top: 10px;
 }
 
+.content.content .category,
+.content.content .tag,
 .profile .header .category,
 .profile .header .tag{
 	padding: 5px 10px;
 	color: #fff;
 	transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
+	text-transform: uppercase;
 }
 
+.content.content .category,
 .profile .header .category{
 	background: #333;
 	border: 1px solid #333;
 }
 
+.content.content .category:hover,
 .profile .header .category:hover{
 	border: 1px solid #333;
 	background: rgba(255,255,255,0.9);
 	color: #333;
 }
 
+.content.content .tag,
 .profile .header .tag{
 	background: #6ECCAD;
 	border: 1px solid #6ECCAD;
 }
 
+.content.content .tag:hover,
 .profile .header .tag:hover{
 	border: 1px solid #6ECCAD;
 	background: rgba(255,255,255, 0.9);
 	color: #6ECCAD;
 }
 
+.content.content .tag:before,
 .profile .header .tag:before{
 	content: '# ';
 }
 
+.content.content .story,
 .profile .header .story{
 	font-family: 'GaramondPremrPro-It', serif;
 	font-size: 15px;
@@ -1738,14 +1920,18 @@ input{
 	letter-spacing: 0;
 }
 
+.content.content .byline .link,
 .profile .header .byline .link{
-	border-bottom: 1px solid #999;
+	font-family: 'proxima_novasemibold', sans-serif;
+	border-bottom: 1px solid #ccc;
 	transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
+	text-transform: uppercase;
 }
 
+.content.content .byline .link:hover,
 .profile .header .byline .link:hover{
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #999;
 	color: #999;
 }
 
@@ -1858,6 +2044,7 @@ input{
 	width: 90%;
 }
 
+.content .body strong,
 .profile .body strong{
 	display: block;
 	margin-top: 50px;
@@ -1868,6 +2055,7 @@ input{
 	color: #000;
 }
 
+.content .body em,
 .profile .body em{
 	font-family: 'proxima_novasemibold', serif;
 	font-size: 12px;
@@ -1924,6 +2112,7 @@ input{
 	width: 250px;
 	margin: 0 auto;
 	padding: 0;
+	margin-bottom: 30px;
 }
 
 .h-entry footer .byline .heading{
