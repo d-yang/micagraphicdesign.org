@@ -113,10 +113,10 @@ textarea {
 
 @font-face {
  	font-family: 'GaramondPremrPro-Disp';
- 	src: url('../font/GaramondPremrPro-Disp.eot') format('embedded-opentype'),
- 	     url('../font/GaramondPremrPro-Disp.woff') format('woff'),
-  		 url('../font/GaramondPremrPro-Disp.ttf') format('truetype'),
-  		 url('../font/GaramondPremrPro-Disp.svg') format('svg');
+ 	src: url('font/GaramondPremrPro-Disp.eot') format('embedded-opentype'),
+ 	     url('font/GaramondPremrPro-Disp.woff') format('woff'),
+  		 url('font/GaramondPremrPro-Disp.ttf') format('truetype'),
+  		 url('font/GaramondPremrPro-Disp.svg') format('svg');
   	font-weight: normal;
 	font-style: normal;
 }
@@ -500,6 +500,23 @@ input{
 /* ---------------------------------------------- home */
 
 
+.main > .heading > .permalink{
+	display: inline-block;
+	padding: 0 3px;
+	font-family: 'GaramondPremrPro-It', serif;
+	text-transform: lowercase;
+	font-size: 15px;
+	letter-spacing: 0px;
+	color: #999;
+	border-bottom: 1px solid #f0f0f0;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.main > .heading > .permalink:hover{
+	color: #333;
+	border-bottom: 1px solid #333;
+}
 
 .events .ui .item{
 	margin-right: 7px;
@@ -537,12 +554,23 @@ input{
 
 .gallery{
 	margin: 0;
-	margin-top: 100px;
+	margin-bottom: 50px;
 	padding: 0;
 	width: 100%;
 }
 
-.main > .events .ui,
+.main > .gallery:after{
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100px;
+	height: 300px;
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	z-index: 9999999;
+}
+
 .main > .gallery .slides{
 	background: #fff;
 	padding: 0;
@@ -560,34 +588,20 @@ input{
 	position: relative;
 }
 
-.main > .gallery:after,
-.main > .events:after {
-	content: '';
-	display: block;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 100px;
-	height: 350px;
-	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-	z-index: 9999999;
-}
-
 .events .ui .item img,
 .gallery img{
-	max-width: 250px;
+	width: 100%;
 	height: auto;
 	position: relative;
 }
 
-.events .ui .item,
 .gallery .slide{
 	position: relative;
 	display: inline-block;
     padding: 0;
     margin-right: 7px;
     vertical-align: top;
-    
+    max-width: 250px;
 }
 
 
@@ -634,6 +648,7 @@ input{
     transform: translate3d(0,5px,0);
     z-index: 105;
     letter-spacing: -0.5px;
+    z-index: 9999;
 }
 
 .gallery .slide:hover .caption,
@@ -648,6 +663,7 @@ input{
 	text-align: center;
 	padding: 40px;
 	margin-bottom: 30px;
+	margin-top: 30px;
 }
 
 .spotify .heading{
@@ -660,6 +676,7 @@ input{
 	font-style: normal;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	margin-bottom: 20px;
 }
 
 .spotify .byline .link{
@@ -667,6 +684,14 @@ input{
 	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
+	border-bottom: 1px solid #ccc;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+.spotify .byline .link:hover{
+	color: #999;
+	border-bottom: 1px solid #333;
 }
 
 
