@@ -241,7 +241,7 @@ textarea {
 }
 
 .page > ul{
-	width: 300px;
+	width: 510px;
 	display: block;
 	margin: 0 auto;
 	list-style:none;
@@ -250,9 +250,13 @@ textarea {
 	padding: 0;
 }
 
+.page > ul li{
+	display: inline;
+}
 
 .page > ul > li > a{
-	display: block;
+	display: inline-block;
+	width: 250px;
 	padding: 20px 10px;
 	background: #6ECCAD;
 	font-family: 'proxima_novasemibold', sans-serif;
@@ -260,7 +264,7 @@ textarea {
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 1px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	border: 1px solid #6ECCAD;
 	transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
